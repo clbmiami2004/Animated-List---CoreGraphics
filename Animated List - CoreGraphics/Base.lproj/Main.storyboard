@@ -41,8 +41,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q9J-Xu-tYQ"/>
                     <connections>
-                        <outlet property="showAnimationBUttonConstraint" destination="dSt-Eg-gMs" id="hUh-i0-rdf"/>
-                        <outlet property="userButtonConstraint" destination="MqS-q1-lNB" id="fYQ-ma-c2j"/>
+                        <outlet property="showAnimationBUttonConstraint" destination="VA1-4Y-4J8" id="JgX-86-mVM"/>
+                        <outlet property="userButtonConstraint" destination="sUo-r4-8Mt" id="hVB-DJ-ZRS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yec-15-SNH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
