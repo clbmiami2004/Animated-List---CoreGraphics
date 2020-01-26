@@ -18,13 +18,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         userButtonConstraint.constant -= view.bounds.width
         showAnimationBUttonConstraint.constant -= view.bounds.width
-        
     }
     
+    
     var animationPerformedOnce = false
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
