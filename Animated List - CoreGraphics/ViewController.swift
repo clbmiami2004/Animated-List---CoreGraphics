@@ -9,11 +9,42 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var userButtonConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var showAnimationBUttonConstraint: NSLayoutConstraint!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        userButtonConstraint.constant -= view.bounds.width
+        showAnimationBUttonConstraint.constant -= view.bounds.width
+        
     }
+    
+    var animationPerformedOnce = false
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !animationPerformedOnce {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                    self.userButtonConstraint.constant += self.view.bounds.width
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+                
+                UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+                    self.showAnimationBUttonConstraint.constant += self.view.bounds.width
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+            
+            animationPerformedOnce = true
+            
+            }
+        }
+        
+        
 
 
 }
